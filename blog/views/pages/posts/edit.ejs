@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5">
+    <div class="transbox" style="color:white;">
+        <img class="bg" src="">
+        <div class="card-body">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/posts" style="text-decoration:none; color:silver;">Articles</a>
+                </li>
+                <li class="breadcrumb-item active">Edit</li>
+            </ol>
+            <h1 class="display-3" style="color:whitesmoke;">Edit Article</h1>
+            <form method="post" action="/posts/update/<%= post.id %>" style="color:whitesmoke;">
+                <div class="form-group mb-3">
+                    <label for="pTitle">Title</label>
+                    <input type="text" name="pTitle" class="form-control mt-2" value="<%= post.pTitle %>"></input>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="pContent">Content</label>
+                    <textarea type="pContent" name="pContent" class="form-control mt-2"
+                        value="<%= post.pContent %>"><%= post.pContent %></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-lg btn-warning">
+            </form>
+        </div>
+    </div>
+</div>

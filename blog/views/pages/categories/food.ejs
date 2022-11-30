@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="container mt-5">
+        <div class="text-center mb-5" style="color:#F3EFE0;">
+            <h1>Articles About <%= result[0].pCategoryname %> Category</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card-columns">
+                    <% result.forEach(function(r){ %>
+                        <div class="card mb-5" style="background-color:#F3EFE0;">
+                            <a href="/posts/<%= r.id %>" style="text-decoration:none;">
+                                <img class="card-img-top"
+                                    src="https://www.techinside.com/wp-content/uploads/2022/06/blog-nasil-acilir-7-adimda-blog-acma-rehberi.jpg"
+                                    alt="pictureaboutblog" height="400px" width="auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= r.pTitle %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                            <i class="fas fa-eye">
+                                                <%= r.pCategoryname %> -
+                                            </i>
+
+                                            <i class="far fa-user">
+                                                <%= r.pUsername %> -
+                                            </i>
+
+                                            <i class="fas fa-calendar-alt">
+                                                <%= new Date(r.createdAt) %>
+                                            </i>
+                                        </small>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid mt-5">
+    <div class="transbox" style="color:white;">
+        <img class="bg" src="">
+        <div class="card-body">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/posts" style="text-decoration:none; color:silver;">Articles</a>
+                </li>
+                <li class="breadcrumb-item active">Add</li>
+            </ol>
+
+            <h1 class="display-3" style="color:whitesmoke;">Add Article</h1>
+            <form method="post" action="/posts/create" style="color:whitesmoke;">
+                <div class="form-group mb-3">
+                    <label for="pUsername">What is article owners name?</label>
+                    <input type="text" name="pUsername" class="form-control mt-2"></input>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="pCategoryname">Which category is article related to?</label>
+                    <input type="text" name="pCategoryname" class="form-control mt-2"></input>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="pTitle">What is articles title?</label>
+                    <input type="text" name="pTitle" class="form-control mt-2"></input>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="pContent">Please write down your article content.</label>
+                    <textarea type="text" name="pContent" class="form-control mt-2"></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-warning btn-lg">
+            </form>
+        </div>
+    </div>
+</div>

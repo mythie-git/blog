@@ -1,0 +1,39 @@
+<div class="postcontainer">
+    <div class="transbox" style="color:white;">
+        <img class="bg" src="">
+        <div class="card-body">
+            <h1 class="card-title">
+                <%= post.pTitle %>
+
+            </h1>
+            <p class="card-text">
+                <small class="text" style="color:white ;">
+                    <i class="fas fa-eye">
+                        <%= post.pCategoryname %> -
+                    </i>
+                    <i class="far fa-user">
+                        <%= post.pUsername %>
+                    </i>
+                </small>
+                <br>
+            </p>
+            <p class="card-text">
+                <i class="fas fa-calendar-alt">
+                    <%= new Date(post.createdAt).getHours() + ":" + new Date(post.createdAt).getMinutes() + ", " + new
+                        Date(post.createdAt).toDateString(); %>
+                        <br> <br>
+                </i>
+
+            </p>
+            <p class="card-text">
+                <%= post.pContent %>
+            </p>
+        </div>
+        <div class="mt-5" style="position: relative; top:10%; left:35%; margin: auto;">
+            <a href="/posts/edit/<%= post.id %>" class="btn btn-dark d-inline">Edit</a>
+            <form class="d-inline" action="/posts/delete/<%= post.id %>" method="post">
+                <input type="submit" value="Delete" class="btn btn-danger">
+            </form>
+        </div>
+    </div>
+</div>
